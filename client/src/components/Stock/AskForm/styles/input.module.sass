@@ -1,0 +1,38 @@
+.label_wrapper
+  font-size: 14px
+  border-radius: 2px
+  width: 100%
+  position: relative
+
+  input
+    font-size: inherit
+    background: inherit
+    outline: none
+    padding: 8px 64px 8px 12px
+    border-radius: 4px
+    width: inherit
+    border: 2px solid transparent
+    background: #1e2026
+    color: white
+    text-align: right
+
+    &:hover:not(:disabled)
+      border: 2px solid green
+
+      /* Chrome, Safari, Edge, Opera */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button 
+      -webkit-appearance: none
+      margin: 0    
+
+  span
+    position: absolute
+    color: #929aa5
+    padding: 8px 12px
+    bottom: -2px
+    font-size: inherit
+  
+  span:last-child
+    right: 0
+
+

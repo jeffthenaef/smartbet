@@ -1,0 +1,5 @@
+{
+    "legacyWatch": true,
+    "exec": "npm run start",
+    "ext": "js ts"
+  }

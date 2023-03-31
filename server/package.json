@@ -1,0 +1,20 @@
+{
+  "name": "expressApp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^4.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "nodemailer": "^6.3.0",
+    "nodemon": "^1.18.10",
+    "sendmail": "^1.6.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  }
+}

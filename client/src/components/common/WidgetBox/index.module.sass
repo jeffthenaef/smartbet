@@ -1,0 +1,27 @@
+.widget
+  // background: url('assets/img/backgrounds/widget-pattern.png')
+  margin-top: 30px
+  margin-bottom: 30px
+  max-height: 40em
+  overflow-y: auto
+
+  /* Custom Scrollbars */
+  &::-webkit-scrollbar
+    width: 0.5em
+    min-width: 5px
+   
+  &::-webkit-scrollbar-track
+    background-color: #111
+    border-radius: 1rem
+   
+  &::-webkit-scrollbar-thumb
+    background-color: var(--c-gray)
+    border-radius: 1rem
+
+  &Content
+    padding: 10px
+    font-size: 14px
+    background: #111
+
+    &:hover
+      background: #000

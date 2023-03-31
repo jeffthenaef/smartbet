@@ -1,0 +1,6 @@
+{
+    "legacyWatch": true,
+    "watch": ["build"],
+    "exec": "serve build",
+    "ext": "js ts"
+  }

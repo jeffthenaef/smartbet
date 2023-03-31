@@ -1,0 +1,3543 @@
+{
+  "contractName": "Deposit",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "currentStatus",
+      "outputs": [
+        {
+          "internalType": "enum Deposit.Status",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "orderBook",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_orderBook",
+          "type": "address"
+        }
+      ],
+      "name": "setOrderBook",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "deposit",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "interfaceDeposit",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"constant\":true,\"inputs\":[],\"name\":\"currentStatus\",\"outputs\":[{\"internalType\":\"enum Deposit.Status\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"deposit\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"interfaceDeposit\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"orderBook\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_orderBook\",\"type\":\"address\"}],\"name\":\"setOrderBook\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/przemocny/Projects/krypto/smartbet-token/contracts/dex/Deposit.sol\":\"Deposit\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/przemocny/Projects/krypto/smartbet-token/contracts/dex/Deposit.sol\":{\"keccak256\":\"0x8ad4a3292c4415606b6e773109d5fd7f20d0ad4d0c2fa766451ad825207c045b\",\"urls\":[\"bzz-raw://919658d0d59c2c856b7a4803fca2e07a3730f165dc8438064e851a87779f27a9\",\"dweb:/ipfs/QmfJHSsbNTvGBKL8D4GAaN6aWDmnhCSFZD5qj4hZoHJaxe\"]},\"/home/przemocny/Projects/krypto/smartbet-token/contracts/interfaces/DepositInterface.sol\":{\"keccak256\":\"0x695115483839fca0980d9db54128d8c1e6b9933fc4f83589d799b36981e6f295\",\"urls\":[\"bzz-raw://cb38a7d99474f8e6df40a9976b134dc1ffe13c4eff0dccfd0f1afb3639a19b07\",\"dweb:/ipfs/QmRZv2ZtNPSMyxT5bhVZYZmChYrzPPPWMy5CeqdaGXh9rT\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0x90a3995645af7562d84b9d69363ffa5ae7217714ab61e951bf7bc450f40e4061\",\"urls\":[\"bzz-raw://216ef9d6b614db4eb46970b4e84903f2534a45572dd30a79f0041f1a5830f436\",\"dweb:/ipfs/QmNPrJ4MWKUAWzKXpUqeyKRUfosaoANZAqXgvepdrCwZAG\"]},\"@openzeppelin/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0x6fb9d7889769d7cc161225f9ef7a90e468ba9788b253816f8d8b6894d3472c24\",\"urls\":[\"bzz-raw://cf4c00fc3c37cc5acf0c82ec6fd97bab67d72c2567fdc0ebf023d9c09b30a08e\",\"dweb:/ipfs/Qmb7TChG6DsEDX7LooJ4vmxot19f7VXX8S1zUGPeJTWbwZ\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060006100216100e760201b60201c565b9050806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508073ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35060008060146101000a81548160ff021916908360018111156100dd57fe5b02179055506100ef565b600033905090565b610c82806100fe6000396000f3fe6080604052600436106100915760003560e01c80638f32d59b116100595780638f32d59b146102225780639a1598c814610251578063d0e30db0146102a2578063ef8a9235146102ac578063f2fde38b146102e557610091565b806303fb0e20146100f35780632e1a7d4d14610122578063715018a61461015d578063776af5ba146101745780638da5cb5b146101cb575b3073ffffffffffffffffffffffffffffffffffffffff1663d0e30db06040518163ffffffff1660e01b8152600401600060405180830381600087803b1580156100d957600080fd5b505af11580156100ed573d6000803e3d6000fd5b50505050005b3480156100ff57600080fd5b50610108610336565b604051808215151515815260200191505060405180910390f35b34801561012e57600080fd5b5061015b6004803603602081101561014557600080fd5b810190808035906020019092919050505061033f565b005b34801561016957600080fd5b50610172610547565b005b34801561018057600080fd5b50610189610680565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101d757600080fd5b506101e06106a6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561022e57600080fd5b506102376106cf565b604051808215151515815260200191505060405180910390f35b34801561025d57600080fd5b506102a06004803603602081101561027457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061072d565b005b6102aa6108ac565b005b3480156102b857600080fd5b506102c16109f1565b604051808260018111156102d157fe5b60ff16815260200191505060405180910390f35b3480156102f157600080fd5b506103346004803603602081101561030857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610a04565b005b60006001905090565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146103e5576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526024815260200180610c2a6024913960400191505060405180910390fd5b60018060018111156103f357fe5b600060149054906101000a900460ff16600181111561040e57fe5b14610481576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260168152602001807f537461747573206973206e6f7420636f72726563742e0000000000000000000081525060200191505060405180910390fd5b814710156104da576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602d815260200180610bfd602d913960400191505060405180910390fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc839081150290604051600060405180830381858888f19350505050158015610542573d6000803e3d6000fd5b505050565b61054f6106cf565b6105c1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16610711610a8a565b73ffffffffffffffffffffffffffffffffffffffff1614905090565b6107356106cf565b6107a7576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b60008060018111156107b557fe5b600060149054906101000a900460ff1660018111156107d057fe5b14610843576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260168152602001807f537461747573206973206e6f7420636f72726563742e0000000000000000000081525060200191505060405180910390fd5b81600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506001600060146101000a81548160ff021916908360018111156108a357fe5b02179055505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610952576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526024815260200180610c2a6024913960400191505060405180910390fd5b600180600181111561096057fe5b600060149054906101000a900460ff16600181111561097b57fe5b146109ee576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260168152602001807f537461747573206973206e6f7420636f72726563742e0000000000000000000081525060200191505060405180910390fd5b50565b600060149054906101000a900460ff1681565b610a0c6106cf565b610a7e576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b610a8781610a92565b50565b600033905090565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415610b18576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526026815260200180610bd76026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373436f6e7472616374206d757374206861766520656e6f7567682062616c616e636520746f2077697468647261774f6e6c79206f7264657220626f6f6b20636f6e747261637420697320616c6c6f7765642ea265627a7a7231582017c0d86c282a70e677acb8757420b6ac6836fa47aaf7621ae913e11fadaf603764736f6c63430005110032",
+  "deployedBytecode": "0x6080604052600436106100915760003560e01c80638f32d59b116100595780638f32d59b146102225780639a1598c814610251578063d0e30db0146102a2578063ef8a9235146102ac578063f2fde38b146102e557610091565b806303fb0e20146100f35780632e1a7d4d14610122578063715018a61461015d578063776af5ba146101745780638da5cb5b146101cb575b3073ffffffffffffffffffffffffffffffffffffffff1663d0e30db06040518163ffffffff1660e01b8152600401600060405180830381600087803b1580156100d957600080fd5b505af11580156100ed573d6000803e3d6000fd5b50505050005b3480156100ff57600080fd5b50610108610336565b604051808215151515815260200191505060405180910390f35b34801561012e57600080fd5b5061015b6004803603602081101561014557600080fd5b810190808035906020019092919050505061033f565b005b34801561016957600080fd5b50610172610547565b005b34801561018057600080fd5b50610189610680565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101d757600080fd5b506101e06106a6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561022e57600080fd5b506102376106cf565b604051808215151515815260200191505060405180910390f35b34801561025d57600080fd5b506102a06004803603602081101561027457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061072d565b005b6102aa6108ac565b005b3480156102b857600080fd5b506102c16109f1565b604051808260018111156102d157fe5b60ff16815260200191505060405180910390f35b3480156102f157600080fd5b506103346004803603602081101561030857600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610a04565b005b60006001905090565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146103e5576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526024815260200180610c2a6024913960400191505060405180910390fd5b60018060018111156103f357fe5b600060149054906101000a900460ff16600181111561040e57fe5b14610481576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260168152602001807f537461747573206973206e6f7420636f72726563742e0000000000000000000081525060200191505060405180910390fd5b814710156104da576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602d815260200180610bfd602d913960400191505060405180910390fd5b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc839081150290604051600060405180830381858888f19350505050158015610542573d6000803e3d6000fd5b505050565b61054f6106cf565b6105c1576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a360008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16610711610a8a565b73ffffffffffffffffffffffffffffffffffffffff1614905090565b6107356106cf565b6107a7576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b60008060018111156107b557fe5b600060149054906101000a900460ff1660018111156107d057fe5b14610843576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260168152602001807f537461747573206973206e6f7420636f72726563742e0000000000000000000081525060200191505060405180910390fd5b81600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506001600060146101000a81548160ff021916908360018111156108a357fe5b02179055505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610952576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526024815260200180610c2a6024913960400191505060405180910390fd5b600180600181111561096057fe5b600060149054906101000a900460ff16600181111561097b57fe5b146109ee576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260168152602001807f537461747573206973206e6f7420636f72726563742e0000000000000000000081525060200191505060405180910390fd5b50565b600060149054906101000a900460ff1681565b610a0c6106cf565b610a7e576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260208152602001807f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e657281525060200191505060405180910390fd5b610a8781610a92565b50565b600033905090565b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff161415610b18576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526026815260200180610bd76026913960400191505060405180910390fd5b8073ffffffffffffffffffffffffffffffffffffffff166000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a3806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505056fe4f776e61626c653a206e6577206f776e657220697320746865207a65726f2061646472657373436f6e7472616374206d757374206861766520656e6f7567682062616c616e636520746f2077697468647261774f6e6c79206f7264657220626f6f6b20636f6e747261637420697320616c6c6f7765642ea265627a7a7231582017c0d86c282a70e677acb8757420b6ac6836fa47aaf7621ae913e11fadaf603764736f6c63430005110032",
+  "sourceMap": "128:1305:10:-;;;620:78;8:9:-1;5:2;;;30:1;27;20:12;5:2;620:78:10;698:17:23;718:12;:10;;;:12;;:::i;:::-;698:32;;749:9;740:6;;:18;;;;;;;;;;;;;;;;;;806:9;773:43;;802:1;773:43;;;;;;;;;;;;664:159;677:14:10;661:13;;:30;;;;;;;;;;;;;;;;;;;;;;;;128:1305;;788:96:21;833:15;867:10;860:17;;788:96;:::o;128:1305:10:-;;;;;;;",
+  "deployedSourceMap": "128:1305:10:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1410:4;:12;;;:14;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1410:14:10;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1410:14:10;;;;128:1305;1280:85;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1280:85:10;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;905:272;;8:9:-1;5:2;;;30:1;27;20:12;5:2;905:272:10;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;905:272:10;;;;;;;;;;;;;;;;;:::i;:::-;;1684:137:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1684:137:23;;;:::i;:::-;;275:32:10;;8:9:-1;5:2;;;30:1;27;20:12;5:2;275:32:10;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;899:77:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;899:77:23;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1250:92;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1250:92:23;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;704:195:10;;8:9:-1;5:2;;;30:1;27;20:12;5:2;704:195:10;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;704:195:10;;;;;;;;;;;;;;;;;;;:::i;:::-;;1183:91;;;:::i;:::-;;241:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;241:27:10;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1970:107:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1970:107:23;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1970:107:23;;;;;;;;;;;;;;;;;;;:::i;:::-;;1280:85:10;1331:4;1354;1347:11;;1280:85;:::o;905:272::-;383:9;;;;;;;;;;;369:23;;:10;:23;;;348:106;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;981:18;550:6;533:23;;;;;;;;:13;;;;;;;;;;;:23;;;;;;;;;512:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1057:6;1032:21;:31;;1011:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1144:9;;;;;;;;;;;:18;;:26;1163:6;1144:26;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1144:26:10;456:1;905:272;:::o;1684:137:23:-;1103:9;:7;:9::i;:::-;1095:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1782:1;1745:40;;1766:6;;;;;;;;;;;1745:40;;;;;;;;;;;;1812:1;1795:6;;:19;;;;;;;;;;;;;;;;;;1684:137::o;275:32:10:-;;;;;;;;;;;;;:::o;899:77:23:-;937:7;963:6;;;;;;;;;;;956:13;;899:77;:::o;1250:92::-;1290:4;1329:6;;;;;;;;;;;1313:22;;:12;:10;:12::i;:::-;:22;;;1306:29;;1250:92;:::o;704:195:10:-;1103:9:23;:7;:9::i;:::-;1095:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;782:14:10;550:6;533:23;;;;;;;;:13;;;;;;;;;;;:23;;;;;;;;;512:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;836:10;808:9;;:40;;;;;;;;;;;;;;;;;;874:18;858:13;;:34;;;;;;;;;;;;;;;;;;;;;;;;1159:1:23;704:195:10;:::o;1183:91::-;383:9;;;;;;;;;;;369:23;;:10;:23;;;348:106;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1252:18;550:6;533:23;;;;;;;;:13;;;;;;;;;;;:23;;;;;;;;;512:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;456:1;1183:91::o;241:27::-;;;;;;;;;;;;;:::o;1970:107:23:-;1103:9;:7;:9::i;:::-;1095:54;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2042:28;2061:8;2042:18;:28::i;:::-;1970:107;:::o;788:96:21:-;833:15;867:10;860:17;;788:96;:::o;2178:225:23:-;2271:1;2251:22;;:8;:22;;;;2243:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2360:8;2331:38;;2352:6;;;;;;;;;;;2331:38;;;;;;;;;;;;2388:8;2379:6;;:17;;;;;;;;;;;;;;;;;;2178:225;:::o",
+  "source": "pragma solidity ^0.5.2;\n\nimport \"@openzeppelin/contracts/ownership/Ownable.sol\";\n\nimport \"../interfaces/DepositInterface.sol\";\n\ncontract Deposit is Ownable, DepositInterface {\n    enum Status {\n        CREATED,\n        INITIALIZED\n    }\n    Status public currentStatus;\n\n    address payable public orderBook;\n    modifier onlyOrderBook() {\n        require(\n            msg.sender == orderBook,\n            \"Only order book contract is allowed.\"\n        ); _;\n    }\n    modifier statusIs(Status status) {\n        require(\n            currentStatus == status,\n            \"Status is not correct.\"\n        ); _;\n    }\n\n    constructor() Ownable() public {\n        currentStatus = Status.CREATED;\n    }\n\n    function setOrderBook(address _orderBook) public\n    onlyOwner()\n    statusIs(Status.CREATED) {\n        orderBook = address(uint160(_orderBook));\n        currentStatus = Status.INITIALIZED;\n    }\n\n    function withdraw(uint256 amount) external\n    onlyOrderBook()\n    statusIs(Status.INITIALIZED) {\n        require(\n            address(this).balance >= amount,\n            \"Contract must have enough balance to withdraw\"\n        );\n        orderBook.transfer(amount);\n    }\n\n    function deposit() external payable\n    onlyOrderBook()\n    statusIs(Status.INITIALIZED) {}\n\n    function interfaceDeposit() external pure returns (bool) {\n        return true;\n    }\n\n    function () external payable {\n        this.deposit();\n    }\n}\n",
+  "sourcePath": "/home/przemocny/Projects/krypto/smartbet-token/contracts/dex/Deposit.sol",
+  "ast": {
+    "absolutePath": "/home/przemocny/Projects/krypto/smartbet-token/contracts/dex/Deposit.sol",
+    "exportedSymbols": {
+      "Deposit": [
+        2188
+      ]
+    },
+    "id": 2189,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2058,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:10"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/ownership/Ownable.sol",
+        "file": "@openzeppelin/contracts/ownership/Ownable.sol",
+        "id": 2059,
+        "nodeType": "ImportDirective",
+        "scope": 2189,
+        "sourceUnit": 3305,
+        "src": "25:55:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/home/przemocny/Projects/krypto/smartbet-token/contracts/interfaces/DepositInterface.sol",
+        "file": "../interfaces/DepositInterface.sol",
+        "id": 2060,
+        "nodeType": "ImportDirective",
+        "scope": 2189,
+        "sourceUnit": 2386,
+        "src": "82:44:10",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2061,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 3304,
+              "src": "148:7:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$3304",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 2062,
+            "nodeType": "InheritanceSpecifier",
+            "src": "148:7:10"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2063,
+              "name": "DepositInterface",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2385,
+              "src": "157:16:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DepositInterface_$2385",
+                "typeString": "contract DepositInterface"
+              }
+            },
+            "id": 2064,
+            "nodeType": "InheritanceSpecifier",
+            "src": "157:16:10"
+          }
+        ],
+        "contractDependencies": [
+          2385,
+          2999,
+          3304
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2188,
+        "linearizedBaseContracts": [
+          2188,
+          2385,
+          3304,
+          2999
+        ],
+        "name": "Deposit",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Deposit.Status",
+            "id": 2067,
+            "members": [
+              {
+                "id": 2065,
+                "name": "CREATED",
+                "nodeType": "EnumValue",
+                "src": "202:7:10"
+              },
+              {
+                "id": 2066,
+                "name": "INITIALIZED",
+                "nodeType": "EnumValue",
+                "src": "219:11:10"
+              }
+            ],
+            "name": "Status",
+            "nodeType": "EnumDefinition",
+            "src": "180:56:10"
+          },
+          {
+            "constant": false,
+            "id": 2069,
+            "name": "currentStatus",
+            "nodeType": "VariableDeclaration",
+            "scope": 2188,
+            "src": "241:27:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_Status_$2067",
+              "typeString": "enum Deposit.Status"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 2068,
+              "name": "Status",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2067,
+              "src": "241:6:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_Status_$2067",
+                "typeString": "enum Deposit.Status"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 2071,
+            "name": "orderBook",
+            "nodeType": "VariableDeclaration",
+            "scope": 2188,
+            "src": "275:32:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address_payable",
+              "typeString": "address payable"
+            },
+            "typeName": {
+              "id": 2070,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "275:15:10",
+              "stateMutability": "payable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2082,
+              "nodeType": "Block",
+              "src": "338:126:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        "id": 2077,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 2074,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3851,
+                            "src": "369:3:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 2075,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "369:10:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 2076,
+                          "name": "orderBook",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2071,
+                          "src": "383:9:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "369:23:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4f6e6c79206f7264657220626f6f6b20636f6e747261637420697320616c6c6f7765642e",
+                        "id": 2078,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "406:38:10",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_ddb5b0a613db147348ce9b7cae388ea1bc88840e29a507772f7a34553d9824b3",
+                          "typeString": "literal_string \"Only order book contract is allowed.\""
+                        },
+                        "value": "Only order book contract is allowed."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_ddb5b0a613db147348ce9b7cae388ea1bc88840e29a507772f7a34553d9824b3",
+                          "typeString": "literal_string \"Only order book contract is allowed.\""
+                        }
+                      ],
+                      "id": 2073,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        3854,
+                        3855
+                      ],
+                      "referencedDeclaration": 3855,
+                      "src": "348:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 2079,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "348:106:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2080,
+                  "nodeType": "ExpressionStatement",
+                  "src": "348:106:10"
+                },
+                {
+                  "id": 2081,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "456:1:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2083,
+            "name": "onlyOrderBook",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 2072,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "335:2:10"
+            },
+            "src": "313:151:10",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2095,
+              "nodeType": "Block",
+              "src": "502:112:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_enum$_Status_$2067",
+                          "typeString": "enum Deposit.Status"
+                        },
+                        "id": 2090,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 2088,
+                          "name": "currentStatus",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2069,
+                          "src": "533:13:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Status_$2067",
+                            "typeString": "enum Deposit.Status"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 2089,
+                          "name": "status",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2085,
+                          "src": "550:6:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Status_$2067",
+                            "typeString": "enum Deposit.Status"
+                          }
+                        },
+                        "src": "533:23:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "537461747573206973206e6f7420636f72726563742e",
+                        "id": 2091,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "570:24:10",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_af4b0d647823e889cc7232ee36af4dbf6da0bbb63e01258f02af14b58a77a128",
+                          "typeString": "literal_string \"Status is not correct.\""
+                        },
+                        "value": "Status is not correct."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_af4b0d647823e889cc7232ee36af4dbf6da0bbb63e01258f02af14b58a77a128",
+                          "typeString": "literal_string \"Status is not correct.\""
+                        }
+                      ],
+                      "id": 2087,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        3854,
+                        3855
+                      ],
+                      "referencedDeclaration": 3855,
+                      "src": "512:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 2092,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "512:92:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2093,
+                  "nodeType": "ExpressionStatement",
+                  "src": "512:92:10"
+                },
+                {
+                  "id": 2094,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "606:1:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2096,
+            "name": "statusIs",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 2086,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2085,
+                  "name": "status",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2096,
+                  "src": "487:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Status_$2067",
+                    "typeString": "enum Deposit.Status"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 2084,
+                    "name": "Status",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 2067,
+                    "src": "487:6:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Status_$2067",
+                      "typeString": "enum Deposit.Status"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "486:15:10"
+            },
+            "src": "469:145:10",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2106,
+              "nodeType": "Block",
+              "src": "651:47:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2104,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2101,
+                      "name": "currentStatus",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2069,
+                      "src": "661:13:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Status_$2067",
+                        "typeString": "enum Deposit.Status"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2102,
+                        "name": "Status",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2067,
+                        "src": "677:6:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Status_$2067_$",
+                          "typeString": "type(enum Deposit.Status)"
+                        }
+                      },
+                      "id": 2103,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "CREATED",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "677:14:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Status_$2067",
+                        "typeString": "enum Deposit.Status"
+                      }
+                    },
+                    "src": "661:30:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Status_$2067",
+                      "typeString": "enum Deposit.Status"
+                    }
+                  },
+                  "id": 2105,
+                  "nodeType": "ExpressionStatement",
+                  "src": "661:30:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2107,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [],
+                "id": 2099,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2098,
+                  "name": "Ownable",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3304,
+                  "src": "634:7:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_Ownable_$3304_$",
+                    "typeString": "type(contract Ownable)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "634:9:10"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2097,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "631:2:10"
+            },
+            "returnParameters": {
+              "id": 2100,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "651:0:10"
+            },
+            "scope": 2188,
+            "src": "620:78:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2131,
+              "nodeType": "Block",
+              "src": "798:101:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2124,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2118,
+                      "name": "orderBook",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2071,
+                      "src": "808:9:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 2121,
+                              "name": "_orderBook",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2109,
+                              "src": "836:10:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 2120,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "828:7:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint160_$",
+                              "typeString": "type(uint160)"
+                            },
+                            "typeName": "uint160"
+                          },
+                          "id": 2122,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "828:19:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint160",
+                            "typeString": "uint160"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint160",
+                            "typeString": "uint160"
+                          }
+                        ],
+                        "id": 2119,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "820:7:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": "address"
+                      },
+                      "id": 2123,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "820:28:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "808:40:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 2125,
+                  "nodeType": "ExpressionStatement",
+                  "src": "808:40:10"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 2129,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 2126,
+                      "name": "currentStatus",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2069,
+                      "src": "858:13:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Status_$2067",
+                        "typeString": "enum Deposit.Status"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2127,
+                        "name": "Status",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2067,
+                        "src": "874:6:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Status_$2067_$",
+                          "typeString": "type(enum Deposit.Status)"
+                        }
+                      },
+                      "id": 2128,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "INITIALIZED",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "874:18:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Status_$2067",
+                        "typeString": "enum Deposit.Status"
+                      }
+                    },
+                    "src": "858:34:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Status_$2067",
+                      "typeString": "enum Deposit.Status"
+                    }
+                  },
+                  "id": 2130,
+                  "nodeType": "ExpressionStatement",
+                  "src": "858:34:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2132,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [],
+                "id": 2112,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2111,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 3237,
+                  "src": "757:9:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "757:11:10"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2114,
+                      "name": "Status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2067,
+                      "src": "782:6:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_Status_$2067_$",
+                        "typeString": "type(enum Deposit.Status)"
+                      }
+                    },
+                    "id": 2115,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "CREATED",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "782:14:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Status_$2067",
+                      "typeString": "enum Deposit.Status"
+                    }
+                  }
+                ],
+                "id": 2116,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2113,
+                  "name": "statusIs",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2096,
+                  "src": "773:8:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_enum$_Status_$2067_$",
+                    "typeString": "modifier (enum Deposit.Status)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "773:24:10"
+              }
+            ],
+            "name": "setOrderBook",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2110,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2109,
+                  "name": "_orderBook",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2132,
+                  "src": "726:18:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2108,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "726:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "725:20:10"
+            },
+            "returnParameters": {
+              "id": 2117,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "798:0:10"
+            },
+            "scope": 2188,
+            "src": "704:195:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2159,
+              "nodeType": "Block",
+              "src": "1001:176:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 2149,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 2145,
+                                "name": "this",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3907,
+                                "src": "1040:4:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_Deposit_$2188",
+                                  "typeString": "contract Deposit"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_contract$_Deposit_$2188",
+                                  "typeString": "contract Deposit"
+                                }
+                              ],
+                              "id": 2144,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "1032:7:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_address_$",
+                                "typeString": "type(address)"
+                              },
+                              "typeName": "address"
+                            },
+                            "id": 2146,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1032:13:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          },
+                          "id": 2147,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "balance",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1032:21:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 2148,
+                          "name": "amount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2134,
+                          "src": "1057:6:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1032:31:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "436f6e7472616374206d757374206861766520656e6f7567682062616c616e636520746f207769746864726177",
+                        "id": 2150,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1077:47:10",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_6880deba553bb23243001b08554f448b2fbed6bbb0ac93b5c35a273f112de607",
+                          "typeString": "literal_string \"Contract must have enough balance to withdraw\""
+                        },
+                        "value": "Contract must have enough balance to withdraw"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_6880deba553bb23243001b08554f448b2fbed6bbb0ac93b5c35a273f112de607",
+                          "typeString": "literal_string \"Contract must have enough balance to withdraw\""
+                        }
+                      ],
+                      "id": 2143,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        3854,
+                        3855
+                      ],
+                      "referencedDeclaration": 3855,
+                      "src": "1011:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 2151,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1011:123:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2152,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1011:123:10"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2156,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2134,
+                        "src": "1163:6:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2153,
+                        "name": "orderBook",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2071,
+                        "src": "1144:9:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "id": 2155,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1144:18:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 2157,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1144:26:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2158,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1144:26:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2160,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [],
+                "id": 2137,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2136,
+                  "name": "onlyOrderBook",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2083,
+                  "src": "952:13:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "952:15:10"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2139,
+                      "name": "Status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2067,
+                      "src": "981:6:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_Status_$2067_$",
+                        "typeString": "type(enum Deposit.Status)"
+                      }
+                    },
+                    "id": 2140,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "INITIALIZED",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "981:18:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Status_$2067",
+                      "typeString": "enum Deposit.Status"
+                    }
+                  }
+                ],
+                "id": 2141,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2138,
+                  "name": "statusIs",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2096,
+                  "src": "972:8:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_enum$_Status_$2067_$",
+                    "typeString": "modifier (enum Deposit.Status)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "972:28:10"
+              }
+            ],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2135,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2134,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2160,
+                  "src": "923:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2133,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "923:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "922:16:10"
+            },
+            "returnParameters": {
+              "id": 2142,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1001:0:10"
+            },
+            "scope": 2188,
+            "src": "905:272:10",
+            "stateMutability": "nonpayable",
+            "superFunction": 2376,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2169,
+              "nodeType": "Block",
+              "src": "1272:2:10",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2170,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [],
+                "id": 2163,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2162,
+                  "name": "onlyOrderBook",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2083,
+                  "src": "1223:13:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1223:15:10"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2165,
+                      "name": "Status",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2067,
+                      "src": "1252:6:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_Status_$2067_$",
+                        "typeString": "type(enum Deposit.Status)"
+                      }
+                    },
+                    "id": 2166,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberName": "INITIALIZED",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1252:18:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Status_$2067",
+                      "typeString": "enum Deposit.Status"
+                    }
+                  }
+                ],
+                "id": 2167,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2164,
+                  "name": "statusIs",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 2096,
+                  "src": "1243:8:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_enum$_Status_$2067_$",
+                    "typeString": "modifier (enum Deposit.Status)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1243:28:10"
+              }
+            ],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2161,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1199:2:10"
+            },
+            "returnParameters": {
+              "id": 2168,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1272:0:10"
+            },
+            "scope": 2188,
+            "src": "1183:91:10",
+            "stateMutability": "payable",
+            "superFunction": 2379,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2177,
+              "nodeType": "Block",
+              "src": "1337:28:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 2175,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1354:4:10",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 2174,
+                  "id": 2176,
+                  "nodeType": "Return",
+                  "src": "1347:11:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2178,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "interfaceDeposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2171,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1305:2:10"
+            },
+            "returnParameters": {
+              "id": 2174,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2173,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2178,
+                  "src": "1331:4:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2172,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1331:4:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1330:6:10"
+            },
+            "scope": 2188,
+            "src": "1280:85:10",
+            "stateMutability": "pure",
+            "superFunction": 2384,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 2186,
+              "nodeType": "Block",
+              "src": "1400:31:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2181,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3907,
+                        "src": "1410:4:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Deposit_$2188",
+                          "typeString": "contract Deposit"
+                        }
+                      },
+                      "id": 2183,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "deposit",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 2170,
+                      "src": "1410:12:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_payable$__$returns$__$",
+                        "typeString": "function () payable external"
+                      }
+                    },
+                    "id": 2184,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1410:14:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2185,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1410:14:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2187,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2179,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1380:2:10"
+            },
+            "returnParameters": {
+              "id": 2180,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1400:0:10"
+            },
+            "scope": 2188,
+            "src": "1371:60:10",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2189,
+        "src": "128:1305:10"
+      }
+    ],
+    "src": "0:1434:10"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/przemocny/Projects/krypto/smartbet-token/contracts/dex/Deposit.sol",
+      "exportedSymbols": {
+        "Deposit": [
+          2188
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".2"
+          ]
+        },
+        "id": 2058,
+        "name": "PragmaDirective",
+        "src": "0:23:10"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 3305,
+          "absolutePath": "@openzeppelin/contracts/ownership/Ownable.sol",
+          "file": "@openzeppelin/contracts/ownership/Ownable.sol",
+          "scope": 2189,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2059,
+        "name": "ImportDirective",
+        "src": "25:55:10"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 2386,
+          "absolutePath": "/home/przemocny/Projects/krypto/smartbet-token/contracts/interfaces/DepositInterface.sol",
+          "file": "../interfaces/DepositInterface.sol",
+          "scope": 2189,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2060,
+        "name": "ImportDirective",
+        "src": "82:44:10"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            2385,
+            2999,
+            3304
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            2188,
+            2385,
+            3304,
+            2999
+          ],
+          "name": "Deposit",
+          "scope": 2189
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Ownable",
+                  "referencedDeclaration": 3304,
+                  "type": "contract Ownable"
+                },
+                "id": 2061,
+                "name": "UserDefinedTypeName",
+                "src": "148:7:10"
+              }
+            ],
+            "id": 2062,
+            "name": "InheritanceSpecifier",
+            "src": "148:7:10"
+          },
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "DepositInterface",
+                  "referencedDeclaration": 2385,
+                  "type": "contract DepositInterface"
+                },
+                "id": 2063,
+                "name": "UserDefinedTypeName",
+                "src": "157:16:10"
+              }
+            ],
+            "id": 2064,
+            "name": "InheritanceSpecifier",
+            "src": "157:16:10"
+          },
+          {
+            "attributes": {
+              "canonicalName": "Deposit.Status",
+              "name": "Status"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "CREATED"
+                },
+                "id": 2065,
+                "name": "EnumValue",
+                "src": "202:7:10"
+              },
+              {
+                "attributes": {
+                  "name": "INITIALIZED"
+                },
+                "id": 2066,
+                "name": "EnumValue",
+                "src": "219:11:10"
+              }
+            ],
+            "id": 2067,
+            "name": "EnumDefinition",
+            "src": "180:56:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "currentStatus",
+              "scope": 2188,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "enum Deposit.Status",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Status",
+                  "referencedDeclaration": 2067,
+                  "type": "enum Deposit.Status"
+                },
+                "id": 2068,
+                "name": "UserDefinedTypeName",
+                "src": "241:6:10"
+              }
+            ],
+            "id": 2069,
+            "name": "VariableDeclaration",
+            "src": "241:27:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "orderBook",
+              "scope": 2188,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address payable",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "payable",
+                  "type": "address payable"
+                },
+                "id": 2070,
+                "name": "ElementaryTypeName",
+                "src": "275:15:10"
+              }
+            ],
+            "id": 2071,
+            "name": "VariableDeclaration",
+            "src": "275:32:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "onlyOrderBook",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2072,
+                "name": "ParameterList",
+                "src": "335:2:10"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_ddb5b0a613db147348ce9b7cae388ea1bc88840e29a507772f7a34553d9824b3",
+                                  "typeString": "literal_string \"Only order book contract is allowed.\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                3854,
+                                3855
+                              ],
+                              "referencedDeclaration": 3855,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 2073,
+                            "name": "Identifier",
+                            "src": "348:7:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_address_payable",
+                                "typeString": "address payable"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 3851,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 2074,
+                                    "name": "Identifier",
+                                    "src": "369:3:10"
+                                  }
+                                ],
+                                "id": 2075,
+                                "name": "MemberAccess",
+                                "src": "369:10:10"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2071,
+                                  "type": "address payable",
+                                  "value": "orderBook"
+                                },
+                                "id": 2076,
+                                "name": "Identifier",
+                                "src": "383:9:10"
+                              }
+                            ],
+                            "id": 2077,
+                            "name": "BinaryOperation",
+                            "src": "369:23:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "4f6e6c79206f7264657220626f6f6b20636f6e747261637420697320616c6c6f7765642e",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Only order book contract is allowed.\"",
+                              "value": "Only order book contract is allowed."
+                            },
+                            "id": 2078,
+                            "name": "Literal",
+                            "src": "406:38:10"
+                          }
+                        ],
+                        "id": 2079,
+                        "name": "FunctionCall",
+                        "src": "348:106:10"
+                      }
+                    ],
+                    "id": 2080,
+                    "name": "ExpressionStatement",
+                    "src": "348:106:10"
+                  },
+                  {
+                    "id": 2081,
+                    "name": "PlaceholderStatement",
+                    "src": "456:1:10"
+                  }
+                ],
+                "id": 2082,
+                "name": "Block",
+                "src": "338:126:10"
+              }
+            ],
+            "id": 2083,
+            "name": "ModifierDefinition",
+            "src": "313:151:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "statusIs",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "status",
+                      "scope": 2096,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum Deposit.Status",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Status",
+                          "referencedDeclaration": 2067,
+                          "type": "enum Deposit.Status"
+                        },
+                        "id": 2084,
+                        "name": "UserDefinedTypeName",
+                        "src": "487:6:10"
+                      }
+                    ],
+                    "id": 2085,
+                    "name": "VariableDeclaration",
+                    "src": "487:13:10"
+                  }
+                ],
+                "id": 2086,
+                "name": "ParameterList",
+                "src": "486:15:10"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_af4b0d647823e889cc7232ee36af4dbf6da0bbb63e01258f02af14b58a77a128",
+                                  "typeString": "literal_string \"Status is not correct.\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                3854,
+                                3855
+                              ],
+                              "referencedDeclaration": 3855,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 2087,
+                            "name": "Identifier",
+                            "src": "512:7:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_enum$_Status_$2067",
+                                "typeString": "enum Deposit.Status"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2069,
+                                  "type": "enum Deposit.Status",
+                                  "value": "currentStatus"
+                                },
+                                "id": 2088,
+                                "name": "Identifier",
+                                "src": "533:13:10"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2085,
+                                  "type": "enum Deposit.Status",
+                                  "value": "status"
+                                },
+                                "id": 2089,
+                                "name": "Identifier",
+                                "src": "550:6:10"
+                              }
+                            ],
+                            "id": 2090,
+                            "name": "BinaryOperation",
+                            "src": "533:23:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "537461747573206973206e6f7420636f72726563742e",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Status is not correct.\"",
+                              "value": "Status is not correct."
+                            },
+                            "id": 2091,
+                            "name": "Literal",
+                            "src": "570:24:10"
+                          }
+                        ],
+                        "id": 2092,
+                        "name": "FunctionCall",
+                        "src": "512:92:10"
+                      }
+                    ],
+                    "id": 2093,
+                    "name": "ExpressionStatement",
+                    "src": "512:92:10"
+                  },
+                  {
+                    "id": 2094,
+                    "name": "PlaceholderStatement",
+                    "src": "606:1:10"
+                  }
+                ],
+                "id": 2095,
+                "name": "Block",
+                "src": "502:112:10"
+              }
+            ],
+            "id": 2096,
+            "name": "ModifierDefinition",
+            "src": "469:145:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "name": "",
+              "scope": 2188,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2097,
+                "name": "ParameterList",
+                "src": "631:2:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2100,
+                "name": "ParameterList",
+                "src": "651:0:10"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 3304,
+                      "type": "type(contract Ownable)",
+                      "value": "Ownable"
+                    },
+                    "id": 2098,
+                    "name": "Identifier",
+                    "src": "634:7:10"
+                  }
+                ],
+                "id": 2099,
+                "name": "ModifierInvocation",
+                "src": "634:9:10"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum Deposit.Status"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2069,
+                              "type": "enum Deposit.Status",
+                              "value": "currentStatus"
+                            },
+                            "id": 2101,
+                            "name": "Identifier",
+                            "src": "661:13:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "CREATED",
+                              "referencedDeclaration": null,
+                              "type": "enum Deposit.Status"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2067,
+                                  "type": "type(enum Deposit.Status)",
+                                  "value": "Status"
+                                },
+                                "id": 2102,
+                                "name": "Identifier",
+                                "src": "677:6:10"
+                              }
+                            ],
+                            "id": 2103,
+                            "name": "MemberAccess",
+                            "src": "677:14:10"
+                          }
+                        ],
+                        "id": 2104,
+                        "name": "Assignment",
+                        "src": "661:30:10"
+                      }
+                    ],
+                    "id": 2105,
+                    "name": "ExpressionStatement",
+                    "src": "661:30:10"
+                  }
+                ],
+                "id": 2106,
+                "name": "Block",
+                "src": "651:47:10"
+              }
+            ],
+            "id": 2107,
+            "name": "FunctionDefinition",
+            "src": "620:78:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "setOrderBook",
+              "scope": 2188,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_orderBook",
+                      "scope": 2132,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 2108,
+                        "name": "ElementaryTypeName",
+                        "src": "726:7:10"
+                      }
+                    ],
+                    "id": 2109,
+                    "name": "VariableDeclaration",
+                    "src": "726:18:10"
+                  }
+                ],
+                "id": 2110,
+                "name": "ParameterList",
+                "src": "725:20:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2117,
+                "name": "ParameterList",
+                "src": "798:0:10"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 3237,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 2111,
+                    "name": "Identifier",
+                    "src": "757:9:10"
+                  }
+                ],
+                "id": 2112,
+                "name": "ModifierInvocation",
+                "src": "757:11:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 2096,
+                      "type": "modifier (enum Deposit.Status)",
+                      "value": "statusIs"
+                    },
+                    "id": 2113,
+                    "name": "Identifier",
+                    "src": "773:8:10"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "member_name": "CREATED",
+                      "referencedDeclaration": null,
+                      "type": "enum Deposit.Status"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 2067,
+                          "type": "type(enum Deposit.Status)",
+                          "value": "Status"
+                        },
+                        "id": 2114,
+                        "name": "Identifier",
+                        "src": "782:6:10"
+                      }
+                    ],
+                    "id": 2115,
+                    "name": "MemberAccess",
+                    "src": "782:14:10"
+                  }
+                ],
+                "id": 2116,
+                "name": "ModifierInvocation",
+                "src": "773:24:10"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address payable"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2071,
+                              "type": "address payable",
+                              "value": "orderBook"
+                            },
+                            "id": 2118,
+                            "name": "Identifier",
+                            "src": "808:9:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "address payable",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint160",
+                                      "typeString": "uint160"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(address)",
+                                  "value": "address"
+                                },
+                                "id": 2119,
+                                "name": "ElementaryTypeNameExpression",
+                                "src": "820:7:10"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "uint160",
+                                  "type_conversion": true
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_address",
+                                          "typeString": "address"
+                                        }
+                                      ],
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "type": "type(uint160)",
+                                      "value": "uint160"
+                                    },
+                                    "id": 2120,
+                                    "name": "ElementaryTypeNameExpression",
+                                    "src": "828:7:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2109,
+                                      "type": "address",
+                                      "value": "_orderBook"
+                                    },
+                                    "id": 2121,
+                                    "name": "Identifier",
+                                    "src": "836:10:10"
+                                  }
+                                ],
+                                "id": 2122,
+                                "name": "FunctionCall",
+                                "src": "828:19:10"
+                              }
+                            ],
+                            "id": 2123,
+                            "name": "FunctionCall",
+                            "src": "820:28:10"
+                          }
+                        ],
+                        "id": 2124,
+                        "name": "Assignment",
+                        "src": "808:40:10"
+                      }
+                    ],
+                    "id": 2125,
+                    "name": "ExpressionStatement",
+                    "src": "808:40:10"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum Deposit.Status"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2069,
+                              "type": "enum Deposit.Status",
+                              "value": "currentStatus"
+                            },
+                            "id": 2126,
+                            "name": "Identifier",
+                            "src": "858:13:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "INITIALIZED",
+                              "referencedDeclaration": null,
+                              "type": "enum Deposit.Status"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2067,
+                                  "type": "type(enum Deposit.Status)",
+                                  "value": "Status"
+                                },
+                                "id": 2127,
+                                "name": "Identifier",
+                                "src": "874:6:10"
+                              }
+                            ],
+                            "id": 2128,
+                            "name": "MemberAccess",
+                            "src": "874:18:10"
+                          }
+                        ],
+                        "id": 2129,
+                        "name": "Assignment",
+                        "src": "858:34:10"
+                      }
+                    ],
+                    "id": 2130,
+                    "name": "ExpressionStatement",
+                    "src": "858:34:10"
+                  }
+                ],
+                "id": 2131,
+                "name": "Block",
+                "src": "798:101:10"
+              }
+            ],
+            "id": 2132,
+            "name": "FunctionDefinition",
+            "src": "704:195:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "withdraw",
+              "scope": 2188,
+              "stateMutability": "nonpayable",
+              "superFunction": 2376,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "amount",
+                      "scope": 2160,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 2133,
+                        "name": "ElementaryTypeName",
+                        "src": "923:7:10"
+                      }
+                    ],
+                    "id": 2134,
+                    "name": "VariableDeclaration",
+                    "src": "923:14:10"
+                  }
+                ],
+                "id": 2135,
+                "name": "ParameterList",
+                "src": "922:16:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2142,
+                "name": "ParameterList",
+                "src": "1001:0:10"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 2083,
+                      "type": "modifier ()",
+                      "value": "onlyOrderBook"
+                    },
+                    "id": 2136,
+                    "name": "Identifier",
+                    "src": "952:13:10"
+                  }
+                ],
+                "id": 2137,
+                "name": "ModifierInvocation",
+                "src": "952:15:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 2096,
+                      "type": "modifier (enum Deposit.Status)",
+                      "value": "statusIs"
+                    },
+                    "id": 2138,
+                    "name": "Identifier",
+                    "src": "972:8:10"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "member_name": "INITIALIZED",
+                      "referencedDeclaration": null,
+                      "type": "enum Deposit.Status"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 2067,
+                          "type": "type(enum Deposit.Status)",
+                          "value": "Status"
+                        },
+                        "id": 2139,
+                        "name": "Identifier",
+                        "src": "981:6:10"
+                      }
+                    ],
+                    "id": 2140,
+                    "name": "MemberAccess",
+                    "src": "981:18:10"
+                  }
+                ],
+                "id": 2141,
+                "name": "ModifierInvocation",
+                "src": "972:28:10"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_6880deba553bb23243001b08554f448b2fbed6bbb0ac93b5c35a273f112de607",
+                                  "typeString": "literal_string \"Contract must have enough balance to withdraw\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                3854,
+                                3855
+                              ],
+                              "referencedDeclaration": 3855,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 2143,
+                            "name": "Identifier",
+                            "src": "1011:7:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">=",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "balance",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "isStructConstructorCall": false,
+                                      "lValueRequested": false,
+                                      "names": [
+                                        null
+                                      ],
+                                      "type": "address payable",
+                                      "type_conversion": true
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": [
+                                            {
+                                              "typeIdentifier": "t_contract$_Deposit_$2188",
+                                              "typeString": "contract Deposit"
+                                            }
+                                          ],
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "type": "type(address)",
+                                          "value": "address"
+                                        },
+                                        "id": 2144,
+                                        "name": "ElementaryTypeNameExpression",
+                                        "src": "1032:7:10"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 3907,
+                                          "type": "contract Deposit",
+                                          "value": "this"
+                                        },
+                                        "id": 2145,
+                                        "name": "Identifier",
+                                        "src": "1040:4:10"
+                                      }
+                                    ],
+                                    "id": 2146,
+                                    "name": "FunctionCall",
+                                    "src": "1032:13:10"
+                                  }
+                                ],
+                                "id": 2147,
+                                "name": "MemberAccess",
+                                "src": "1032:21:10"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2134,
+                                  "type": "uint256",
+                                  "value": "amount"
+                                },
+                                "id": 2148,
+                                "name": "Identifier",
+                                "src": "1057:6:10"
+                              }
+                            ],
+                            "id": 2149,
+                            "name": "BinaryOperation",
+                            "src": "1032:31:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "436f6e7472616374206d757374206861766520656e6f7567682062616c616e636520746f207769746864726177",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Contract must have enough balance to withdraw\"",
+                              "value": "Contract must have enough balance to withdraw"
+                            },
+                            "id": 2150,
+                            "name": "Literal",
+                            "src": "1077:47:10"
+                          }
+                        ],
+                        "id": 2151,
+                        "name": "FunctionCall",
+                        "src": "1011:123:10"
+                      }
+                    ],
+                    "id": 2152,
+                    "name": "ExpressionStatement",
+                    "src": "1011:123:10"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "transfer",
+                              "referencedDeclaration": null,
+                              "type": "function (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2071,
+                                  "type": "address payable",
+                                  "value": "orderBook"
+                                },
+                                "id": 2153,
+                                "name": "Identifier",
+                                "src": "1144:9:10"
+                              }
+                            ],
+                            "id": 2155,
+                            "name": "MemberAccess",
+                            "src": "1144:18:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2134,
+                              "type": "uint256",
+                              "value": "amount"
+                            },
+                            "id": 2156,
+                            "name": "Identifier",
+                            "src": "1163:6:10"
+                          }
+                        ],
+                        "id": 2157,
+                        "name": "FunctionCall",
+                        "src": "1144:26:10"
+                      }
+                    ],
+                    "id": 2158,
+                    "name": "ExpressionStatement",
+                    "src": "1144:26:10"
+                  }
+                ],
+                "id": 2159,
+                "name": "Block",
+                "src": "1001:176:10"
+              }
+            ],
+            "id": 2160,
+            "name": "FunctionDefinition",
+            "src": "905:272:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "deposit",
+              "scope": 2188,
+              "stateMutability": "payable",
+              "superFunction": 2379,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2161,
+                "name": "ParameterList",
+                "src": "1199:2:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2168,
+                "name": "ParameterList",
+                "src": "1272:0:10"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 2083,
+                      "type": "modifier ()",
+                      "value": "onlyOrderBook"
+                    },
+                    "id": 2162,
+                    "name": "Identifier",
+                    "src": "1223:13:10"
+                  }
+                ],
+                "id": 2163,
+                "name": "ModifierInvocation",
+                "src": "1223:15:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 2096,
+                      "type": "modifier (enum Deposit.Status)",
+                      "value": "statusIs"
+                    },
+                    "id": 2164,
+                    "name": "Identifier",
+                    "src": "1243:8:10"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "member_name": "INITIALIZED",
+                      "referencedDeclaration": null,
+                      "type": "enum Deposit.Status"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 2067,
+                          "type": "type(enum Deposit.Status)",
+                          "value": "Status"
+                        },
+                        "id": 2165,
+                        "name": "Identifier",
+                        "src": "1252:6:10"
+                      }
+                    ],
+                    "id": 2166,
+                    "name": "MemberAccess",
+                    "src": "1252:18:10"
+                  }
+                ],
+                "id": 2167,
+                "name": "ModifierInvocation",
+                "src": "1243:28:10"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2169,
+                "name": "Block",
+                "src": "1272:2:10"
+              }
+            ],
+            "id": 2170,
+            "name": "FunctionDefinition",
+            "src": "1183:91:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "interfaceDeposit",
+              "scope": 2188,
+              "stateMutability": "pure",
+              "superFunction": 2384,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2171,
+                "name": "ParameterList",
+                "src": "1305:2:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 2178,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 2172,
+                        "name": "ElementaryTypeName",
+                        "src": "1331:4:10"
+                      }
+                    ],
+                    "id": 2173,
+                    "name": "VariableDeclaration",
+                    "src": "1331:4:10"
+                  }
+                ],
+                "id": 2174,
+                "name": "ParameterList",
+                "src": "1330:6:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 2174
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "74727565",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "bool",
+                          "type": "bool",
+                          "value": "true"
+                        },
+                        "id": 2175,
+                        "name": "Literal",
+                        "src": "1354:4:10"
+                      }
+                    ],
+                    "id": 2176,
+                    "name": "Return",
+                    "src": "1347:11:10"
+                  }
+                ],
+                "id": 2177,
+                "name": "Block",
+                "src": "1337:28:10"
+              }
+            ],
+            "id": 2178,
+            "name": "FunctionDefinition",
+            "src": "1280:85:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "fallback",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 2188,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2179,
+                "name": "ParameterList",
+                "src": "1380:2:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2180,
+                "name": "ParameterList",
+                "src": "1400:0:10"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "deposit",
+                              "referencedDeclaration": 2170,
+                              "type": "function () payable external"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 3907,
+                                  "type": "contract Deposit",
+                                  "value": "this"
+                                },
+                                "id": 2181,
+                                "name": "Identifier",
+                                "src": "1410:4:10"
+                              }
+                            ],
+                            "id": 2183,
+                            "name": "MemberAccess",
+                            "src": "1410:12:10"
+                          }
+                        ],
+                        "id": 2184,
+                        "name": "FunctionCall",
+                        "src": "1410:14:10"
+                      }
+                    ],
+                    "id": 2185,
+                    "name": "ExpressionStatement",
+                    "src": "1410:14:10"
+                  }
+                ],
+                "id": 2186,
+                "name": "Block",
+                "src": "1400:31:10"
+              }
+            ],
+            "id": 2187,
+            "name": "FunctionDefinition",
+            "src": "1371:60:10"
+          }
+        ],
+        "id": 2188,
+        "name": "ContractDefinition",
+        "src": "128:1305:10"
+      }
+    ],
+    "id": 2189,
+    "name": "SourceUnit",
+    "src": "0:1434:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-02-08T20:44:45.937Z",
+  "devdoc": {
+    "methods": {
+      "isOwner()": {
+        "details": "Returns true if the caller is the current owner."
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

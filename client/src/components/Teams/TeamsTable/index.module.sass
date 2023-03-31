@@ -1,0 +1,62 @@
+@value sunglow from 'assets/styles/variables.module.sass'
+
+.event
+  &Title
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &Buttons
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 12px
+
+    button
+      margin-top: 0
+      margin-left: 5px
+      margin-right: 5px
+
+.table
+  padding: 0
+  margin: 0
+  border: 1px solid #dee2e6
+
+  thead
+    tr
+      background-color: sunglow
+      color: #000
+
+  tbody
+    tr
+      &:hover
+        background-color: rgba(24,24,24,.5)
+
+.orderBookTable
+  thead
+    tr
+      background-color: sunglow
+      color: #000
+    th
+      width: 33.33%
+
+  tbody
+    tr
+      &:hover
+        background-color: rgba(24,24,24,.5)
+    td
+      width: 33.33%
+
+.orderBookTable2
+  margin-top: 2rem
+  thead
+    display: none
+
+  tbody
+    tr
+      &:hover
+        background-color: rgba(24,24,24,.5)
+    td
+      width: 33.33%
+
+  // tr:nth-of-type(odd)
+  //   background-color: rgba(0,0,0,.1)

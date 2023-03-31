@@ -1,0 +1,54 @@
+version: "3"
+
+services:
+    express-app:
+        container_name: express-app
+        hostname: express-app
+        
+        build:
+            context: .
+
+        volumes:
+            - express-app:/server
+
+        ports:
+            - "5000:5000"
+
+        # networks: 
+        #     - main
+
+        environment:
+            NODE_ENV: production
+
+
+    # react-app:
+    #     container_name: react-app
+    #     hostname: react-app
+    #     build:
+    #         context: ./client
+
+    #     volumes:
+    #         - react-app:/client
+    #         # - app:/client/build
+
+    #     ports:
+    #         - "8080:80"
+
+    #     environment:
+    #         NODE_ENV: production
+    #         NODE_PATH: src
+    #         GENERATE_SOURCEMAP: "false"
+    #         HOST_URL: express-app
+
+
+    #     networks: 
+    #         - main
+
+
+volumes:
+    # react-app:    
+    express-app:
+    # app:
+
+# networks: 
+    # main:

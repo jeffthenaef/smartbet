@@ -1,0 +1,153 @@
+{
+  "migration": "0xf534D8cD421915DcF11CE47ed9d16688757545Ad",
+  "registry": {
+    "address": "0x8dbE1FEaD653a67f8B1B517684Ba064C55FCB202",
+    "events": {
+      "football": {
+        "address": "0x00DB92966d977B8756dB23899808F729D187b651",
+        "pricing": "0xC5fBE59c5405B4fB5777c2c8b665EbfAf28Cf778",
+        "config": "0x6B895CEad66d272A812b390ce1d1f7F7b1a9102d",
+        "name": "EURO 2021",
+        "teams": [
+          {
+            "address": "0x443D543d8fAF0997fD2A072D44B1a60F15E3c1c0",
+            "name": "Russia"
+          },
+          {
+            "address": "0xFfdEdbe83bd66987656653add5Cf198692B1d47d",
+            "name": "Egipt"
+          },
+          {
+            "address": "0x30243509Cb0fcFf59dc383F53A565c32158CdC3d",
+            "name": "Arabia"
+          },
+          {
+            "address": "0xaF12f3AEfDABc047EF2Eeacd4a26C74257C92153",
+            "name": "Uruguay"
+          },
+          {
+            "address": "0x890f75bbB87f23847eAAB4d1BC1d9d0080BDe7d4",
+            "name": "Maroko"
+          },
+          {
+            "address": "0xa115C1e643eB5bB40fAED9b3f0d9d94e62552029",
+            "name": "Iran"
+          },
+          {
+            "address": "0x153A64CCDF53c2320021Dd5de3947A098972E581",
+            "name": "Portual"
+          },
+          {
+            "address": "0x556D7f02b793C6A0a8Cd7ccE2e8375A8206Ad219",
+            "name": "Spain"
+          },
+          {
+            "address": "0x8D7e55Fa113f15780d6cC6cb2cd5a0D6e6fc4658",
+            "name": "France"
+          },
+          {
+            "address": "0x4DD343f5Fe9ec43A3d8e71c812aeB4cC83560C91",
+            "name": "Austria"
+          },
+          {
+            "address": "0x00D9db5Ed3350A250Cc6559be7a0B4f7EF83b16e",
+            "name": "Peru"
+          },
+          {
+            "address": "0xadE396F619631823eAfa62E6B5B57Bbea38e9fb6",
+            "name": "Denmark"
+          },
+          {
+            "address": "0x2Be331f0CEc9ca3c09e4D5728fD2Be6eF25781fC",
+            "name": "Argentina"
+          },
+          {
+            "address": "0x88Ef89562517756b70168e40284992C92aaD7ADc",
+            "name": "Iceland"
+          },
+          {
+            "address": "0x999b0a5c00CDefacF792B4fA2ED896e0b29e551d",
+            "name": "Croatia"
+          },
+          {
+            "address": "0x288c12c2A84bBBC65F94F3DdEaB09e02165Ded02",
+            "name": "Nigeria"
+          },
+          {
+            "address": "0xcFE739211921771cb83C326ba7fbd5E62F7adBFe",
+            "name": "Costa Rica"
+          },
+          {
+            "address": "0xF729c3481C808b240dd8e02f02654b5a3F6bd7bc",
+            "name": "Serbia"
+          },
+          {
+            "address": "0xe1Ad40117660b7bA5D59A97e91eDA6DCACBC0BE7",
+            "name": "Brazil"
+          },
+          {
+            "address": "0x89892a72654AA5CaF16a4E7d743522650b55c00d",
+            "name": "Switzerland"
+          },
+          {
+            "address": "0x09daAEA92778780e46aDf1e5EF787871aA45A514",
+            "name": "Germany"
+          },
+          {
+            "address": "0x50F8602765e246b3d666d5614f93414542B2eE12",
+            "name": "Mexico"
+          },
+          {
+            "address": "0x9C71D7D4aeFCC50776D75C5E8993d810819976bC",
+            "name": "Sweden"
+          },
+          {
+            "address": "0x29948bC4a0E3A1F7b2D43979CbF48a1E512781AC",
+            "name": "Korea"
+          },
+          {
+            "address": "0x16Ce533C79c15C0D6082F0A6377658fd1D4CAC48",
+            "name": "Belgium"
+          },
+          {
+            "address": "0x370cf4217709da3ABCaA6c019C689E8361ec60Ea",
+            "name": "Panama"
+          },
+          {
+            "address": "0x687804Bc6449f8D91Daf53b982F3cb137fcC6c23",
+            "name": "England"
+          },
+          {
+            "address": "0xedBfB03A011C4f29A2f76c158bB5734d2f9fE17d",
+            "name": "Tunisia"
+          },
+          {
+            "address": "0x77a734f2532344252f7b2b700A30d4c1e9c6Ae57",
+            "name": "Colombia"
+          },
+          {
+            "address": "0x1B389e7567F7FBC5EfeeA0494357897f2bA6DeBA",
+            "name": "Japan"
+          },
+          {
+            "address": "0x37A1Ff819a42e47EB8759F06a1879B84eBE86B6C",
+            "name": "Poland"
+          },
+          {
+            "address": "0x50fCD98F05187A4C0784A9FC4ab093982433907d",
+            "name": "Senegal"
+          }
+        ],
+        "teamsCount": 32
+      },
+      "eventsCount": 1
+    },
+    "deposit": {
+      "address": "0x1c4551f8E5EbC2dED702F9C30ffF3De0C735D42c",
+      "orderBooks": {
+        "buy": "0x9351e658708E3cdaf498e8d56D9C4cd844D2d055",
+        "sell": "0xe6C62631E8f68f81e85Ed18ddc6936F0659715CA"
+      }
+    }
+  }
+}

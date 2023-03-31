@@ -1,0 +1,121 @@
+{
+  "migration": "0x531D2F64481dcE1F2Df9C2A6c80b5CE6E0FD8d4C",
+  "registry": {
+    "address": "0xaD2986381d690F0c03412D15FD56A2B86354647d",
+    "events": {
+      "football": {
+        "address": "0xacDCfe836DC4197398C61077eD1181973670e43c",
+        "pricing": "0x31c428273bA8bf319206C17efaeB7560C0c54ff2",
+        "config": "0x70734B33E3cFab1FEBe3aDf73Bc90bfD7A50a98b",
+        "name": "EURO 2021",
+        "teams": [
+          {
+            "address": "0x67fb0D6Eb4e6A81763a4Af719f13eA7357C5a039",
+            "name": "Italy"
+          },
+          {
+            "address": "0x9629E5A01144464f02E353a28AFA6E58388C1a9c",
+            "name": "Switzerland"
+          },
+          {
+            "address": "0x429d3BAd31BB8fED06A96bE1EF3f2dfd6A5b3D8D",
+            "name": "Turkey"
+          },
+          {
+            "address": "0x2ead34537aB917659623C67a4d50eb8fB534cc64",
+            "name": "Wales"
+          },
+          {
+            "address": "0x8B674970872dbd8D09543e764A726C60031a9d63",
+            "name": "Belgium"
+          },
+          {
+            "address": "0x71833764dD981B246AA243f1Ffc3a92D3e85e9B5",
+            "name": "Denmark"
+          },
+          {
+            "address": "0xE705fC32EA4b14d04AC5abC1dc7ad63fD7A1C1e7",
+            "name": "Finland"
+          },
+          {
+            "address": "0x96Ce23F4ED1Cb9B68d57CF5FA115Fa35e3A79269",
+            "name": "Russia"
+          },
+          {
+            "address": "0x179EB019B47bE6fa31E4bd2c3214D9C38c125094",
+            "name": "Austria"
+          },
+          {
+            "address": "0xa358c51Ca5eE06590A48AB2dBC60F63122642a22",
+            "name": "Netherlands"
+          },
+          {
+            "address": "0xdA88F34bC61BFF2BC34Cb7EeD677AD8Cb7179C13",
+            "name": "North Macedonia"
+          },
+          {
+            "address": "0x17E17cDda780C82aDc02e729a90739ACb642D2BD",
+            "name": "Ukraine"
+          },
+          {
+            "address": "0xd414341e602CCEabB95714773A6bDEC2fad0f2B9",
+            "name": "Croatia"
+          },
+          {
+            "address": "0xD66DC976a29c6511c37709a67eb05a6DFec65E96",
+            "name": "Czech Republic"
+          },
+          {
+            "address": "0xB91cd9fdE39eF5208936856665304827bDbAB877",
+            "name": "England"
+          },
+          {
+            "address": "0xb4699E53d7DA7543A70F3375B58543E0f0b65093",
+            "name": "Scotland"
+          },
+          {
+            "address": "0xad2c39b3c78C9505b69C11b3eD0dCeBB5CcD32d1",
+            "name": "Poland"
+          },
+          {
+            "address": "0x92EF0E308Fe79083A98CA4CB2E47EE781e715942",
+            "name": "Slovakia"
+          },
+          {
+            "address": "0x00fF098d2659B184889071A9F4185B854fE32070",
+            "name": "Spain"
+          },
+          {
+            "address": "0x07f74E5CED8Ff09460D0bc4f659c57F54677Bbbd",
+            "name": "Sweden"
+          },
+          {
+            "address": "0x58FA7d8C94480237a01beD36a5e1740C963F7fdD",
+            "name": "France"
+          },
+          {
+            "address": "0xa3dD426F91623Fd26f612B8BbD19b362b3e61716",
+            "name": "Germany"
+          },
+          {
+            "address": "0xea52f4AcC1072b6AbFA51631CD5068F33d914A2c",
+            "name": "Hungary"
+          },
+          {
+            "address": "0x0C4e3041363a065cfD90b771Ff0dAc2d8A45feeA",
+            "name": "Portugal"
+          }
+        ],
+        "teamsCount": 24
+      }
+    },
+    "eventsCount": 1
+  },
+  "deposit": {
+    "address": "0x6C3BBc9DE7d005A51135815CB9B52122b40408D8",
+    "orderBooks": {
+      "buy": "0x66A73E887547d7DDF3a9bd532A9Cc3721eaE4738",
+      "sell": "0x6c70cA2FDbDe0E739f0211921521aBdB32689168"
+    }
+  }
+}
